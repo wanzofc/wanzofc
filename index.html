@@ -1,594 +1,720 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awan Berlian - Portfolio</title>
-
-    <!-- Meta Tags SEO -->
-    <meta name="description" content="Portfolio Awan Berlian - Web Developer, Cyber Security, Mahasiswa">
-    <meta name="keywords" content="web developer, cyber security, portfolio, awan berlian, mahasiswa">
-
-    <!-- Open Graph Tags (untuk media sosial) -->
-    <meta property="og:title" content="Awan Berlian - Portfolio">
-    <meta property="og:description" content="Portfolio Awan Berlian - Web Developer, Cyber Security, Mahasiswa">
-    <meta property="og:image" content="URL_GAMBAR_ANDA">
-    <meta property="og:url" content="URL_SITUS_ANDA">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <title>my name awan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Animate.css (Alternatif AOS) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <!-- AOS (Animation on Scroll) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <!-- Vanilla Framework CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-framework@3.0.2/dist/vanilla.min.css">
-
-    <!-- Photoswipe -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
-
-    <!-- Leaflet CSS (Untuk Peta) -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJ9iASTE4OCyqlFXk3kWvfNLu9CdjFGhoAUook=" crossorigin=""/> -->
-
-    <!-- Cookie Consent CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
-    <!-- Darkmode.js CSS (Optional - jika menggunakan Dark Mode) -->
-    <!-- <link rel="stylesheet" href="path/to/darkmode.css"> -->
-
-
-    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-        /* Gaya Typed Cursor */
-        .typed-cursor {
-            opacity: 1;
-            animation: typed-cursor-blink 0.7s infinite;
-        }
-
-        @keyframes typed-cursor-blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Gaya Umum */
         body {
             font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden; 
+        }
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+            transition: color 0.3s; 
+        }
+
+        p {
             line-height: 1.6;
-            margin: 0;
+            transition: color 0.3s; 
         }
 
-        header {
-            background-color: #f0f0f0;
-            padding: 1rem 0;
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
-        main {
-            padding: 2rem 0;
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s; 
         }
 
-        #about img {
-            border-radius: 5px;
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .language-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .language-icons a {
+            display: inline-block;
+        }
+
+        .social-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .social-badges a {
+            display: inline-block;
         }
 
         .card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, box-shadow 0.3s; 
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
         }
 
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .pswp__caption__center {
+        .language-grid .card {
             text-align: center;
         }
-        #project-gallery {
+
+        #about-me {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+        }
+
+        #about-me h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        #about-me p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 16px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        #projects {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+        }
+
+        #projects h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .project-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
+            gap: 20px;
         }
 
-        /* Gaya Dark Mode (jika diimplementasikan) */
-        body.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-
-        body.dark-mode header {
-            background-color: #444;
-        }
-
-        /* Gaya Peta */
-        #map {
-            height: 300px; /* Atur tinggi peta sesuai kebutuhan */
-            width: 100%;
-            border-radius: 5px;
-        }
-        /* Style Skill card */
-        .skill-card {
-            border: 1px solid #ccc;
+        .project-item {
+            border: 1px solid #ddd;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            padding: 15px;
+            transition: all 0.3s ease;
         }
 
-        .skill-card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .project-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: translateY(-3px);
         }
-        /* Style Download Resume */
-        #download-resume {
-            text-align: center;
-            margin-top: 2rem;
+
+        .project-item h3 {
+            color: #34495e;
+            margin-bottom: 10px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
         }
 
+        .project-item p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .project-item a {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+
+        #experience {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+        }
+
+        #experience h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            transition: background-color 0.3s; /* Tambahkan transisi */
+        }
+
+        .experience-item h3 {
+            color: #34495e;
+            margin-bottom: 5px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .experience-item p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .experience-item .date {
+            font-style: italic;
+            color: #777;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        #education {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+        }
+
+        #education h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #27ae60;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            transition: background-color 0.3s; /* Tambahkan transisi */
+        }
+
+        .education-item h3 {
+            color: #34495e;
+            margin-bottom: 5px;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .education-item p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s; /* Tambahkan transisi untuk perubahan warna */
+        }
+
+        .education-item .date {
+            font-style: italic;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        #contact {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        #contact h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; 
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+            transition: color 0.3s; 
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        #contact form {
+            margin-top: 20px;
+        }
+
+        #contact form input[type="text"],
+        #contact form input[type="email"],
+        #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #contact form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        #contact form button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        #contact form button:hover {
+            background-color: #2980b9;
+        }
+
+        #youtube-video {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+
+        #youtube-video h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: color 0.3s; 
+            }
+        #youtube-video .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        #youtube-video .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #eee;
+        }
+
+        .dark-mode .card {
+            background-color: #333;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+
+        #theme-toggle {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .dark-mode #theme-toggle {
+            color: #eee;
+        }
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3 {
+            color: #ffca28;
+            text-shadow: 0 0 5px #c6a700;
+            font-weight: 600;
+        }
+
+        body.dark-mode p {
+            color: #bbdefb;
+            filter: brightness(1.1);
+        }
+
+        body.dark-mode a {
+            color: #80deea;
+            text-shadow: 0 0 3px #80deea;
+        }
+
+        body.dark-mode .experience-item h3,
+        body.dark-mode .education-item h3 {
+            color: #a7ffeb;
+            font-weight: bold;
+        }
+
+        body.dark-mode .contact-info p {
+            color: #b2ebf2;
+        }
+
+        body.dark-mode button {
+            color: #000;
+            background-color: #ffca28;
+            font-weight: bold;
+        }
+        body.dark-mode #about-me h2 {
+            background: linear-gradient(to right, #80deea, #4dd0e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none;
+        }
+        .profile-container {
+            position: fixed;
+            top: 0px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .profile-video {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .profile-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .theme-toggle-container {
+            text-align: left;
+            margin-right: auto;
+    }
+        #greeting {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            transition: color 0.3s; 
+        }
+        body.dark-mode #greeting {
+            color: #ffca28; 
+            text-shadow: 0 0 5px #c6a700; 
+        }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Awan Berlian <i class="fas fa-code"></i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Tentang Saya</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Keterampilan</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#interests">Minat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Proyek</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontak</a>
-                    </li>
-                    <!-- Dark Mode Toggle (Optional) -->
-                    <li class="nav-item">
-                        <button id="darkModeToggle" class="btn btn-outline-dark btn-sm">Dark Mode</button>
-                    </li>
-                </ul>
+    <div class="card">
+        <div class="profile-container">
+            <div class="theme-toggle-container">
+                <button id="theme-toggle">
+                    <i id="theme-icon" class="fas fa-sun"></i>
+                </button>
             </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="p-strip">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6" data-aos="fade-right">
-                        <h2>Tentang Saya</h2>
-                        <p>
-                            Perkenalkan, saya [Awan Berlian] <span id="typed-text"></span> yang bersemangat tentang dunia digital.
-                            Saya memiliki pengalaman dalam pengembangan web, keamanan siber, dan teknologi.
-                        </p>
-                         <!-- Download Resume Button -->
-                        <div id="download-resume">
-                             <a href="resume.pdf" class="btn btn-primary" download>Unduh Resume</a> <!-- Ganti resume.pdf dengan path file Anda -->
-                         </div>
-                    </div>
-                    <div class="col-md-6" data-aos="fade-left">
-                        <img data-src="https://files.catbox.moe/ykn01q.jpg" alt="Foto Profil" class="img-fluid rounded lazyload">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-         <!-- Skills Section -->
-        <section id="skills" class="p-strip">
-            <div class="container">
-                <h2>Keterampilan</h2>
-                <p>Bahasa pemrograman dan teknologi yang saya kuasai:</p>
-                <div class="row">
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="card skill-card">
-                            <img data-src="https://files.catbox.moe/8a3dqu.jpg" alt="Python" class="card-img-top lazyload">
-                            <div class="card-body">
-                                <h5 class="card-title">Python</h5>
-                                <p class="card-text">Pengalaman dalam pengembangan web dengan Django dan Flask, serta analisis data.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card skill-card">
-                            <img data-src="https://files.catbox.moe/ykn01q.jpg" alt="JavaScript" class="card-img-top lazyload">
-                            <div class="card-body">
-                                <h5 class="card-title">JavaScript</h5>
-                                <p class="card-text">Familiar dengan React, Node.js, dan pengembangan front-end interaktif.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card skill-card">
-                            <img data-src="https://files.catbox.moe/0l5hin.jpg" alt="HTML/CSS" class="card-img-top lazyload">
-                            <div class="card-body">
-                                <h5 class="card-title">HTML/CSS</h5>
-                                <p class="card-text">Pengalaman luas dalam membuat layout web responsif dan desain yang menarik.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tambahkan card untuk bahasa/teknologi lain di sini -->
-                </div>
-            </div>
-        </section>
-
-         <!-- Interests Section -->
-        <section id="interests" class="p-strip">
-            <div class="container">
-                <h2>Minat</h2>
-                <p>Di luar dunia teknologi, saya juga tertarik pada:</p>
-                <ul>
-                    <li>Fotografi</li>
-                    <li>Hiking</li>
-                    <li>Membaca buku</li>
-                    <!-- Tambahkan minat lain di sini -->
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="p-strip--dark">
-            <div class="container">
-                <h2>Proyek</h2>
-
-                <!-- Swiper -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper" >
-                        <div class="swiper-slide">
-                             <div class="col-md-4 project-item" data-aos="fade-up" data-category="web">
-                        <div class="card">
-                            <a href="projects/project1.html" data-size="1600x900">
-                                <img data-src="placeholder-project1.jpg" alt="Proyek 1" class="card-img-top lazyload">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Proyek 1</h5>
-                                <p class="card-text">Deskripsi singkat proyek 1.</p>
-                                <a href="projects/project1.html" class="btn btn-primary">Lihat Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                        </div>
-                        <div class="swiper-slide">
-                             <div class="col-md-4 project-item" data-aos="fade-up" data-aos-delay="100" data-category="mobile">
-                        <div class="card">
-                            <a href="projects/project2.html" data-size="1600x900">
-                                <img data-src="placeholder-project2.jpg" alt="Proyek 2" class="card-img-top lazyload">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Proyek 2</h5>
-                                <p class="card-text">Deskripsi singkat proyek 2.</p>
-                                <a href="projects/project2.html" class="btn btn-primary">Lihat Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                        </div>
-                        <div class="swiper-slide">
-                             <div class="col-md-4 project-item" data-aos="fade-up" data-aos-delay="200" data-category="cyber">
-                        <div class="card">
-                            <a href="projects/project3.html" data-size="1600x900">
-                                <img data-src="placeholder-project3.jpg" alt="Proyek 3" class="card-img-top lazyload">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Proyek 3</h5>
-                                <p class="card-text">Deskripsi singkat proyek 3.</p>
-                                <a href="projects/project3.html" class="btn btn-primary">Lihat Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-
-                <!-- Filter Buttons -->
-                <div class="text-center mt-3">
-                    <button class="btn btn-outline-primary filter-button" data-filter="*">Semua</button>
-                    <button class="btn btn-outline-primary filter-button" data-filter=".web">Web</button>
-                    <button class="btn btn-outline-primary filter-button" data-filter=".mobile">Mobile</button>
-                    <button class="btn btn-outline-primary filter-button" data-filter=".cyber">Cyber Security</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="p-strip">
-            <div class="container">
-                <h2>Kontak</h2>
-                <p>Anda dapat menghubungi saya melalui:</p>
-
-                <!-- Form Kontak (Formspree) -->
-                <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">  <!-- GANTI DENGAN FORM ID ANDA -->
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nama:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Pesan:</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
-                </form>
-
-                <!-- Informasi Kontak Lain -->
-                <ul>
-                    <li>Email: <a href="mailto:wanzofc@gmail.com">wanzofc@gmail.com</a></li>
-                    <li>LinkedIn: <a href="#"><i class="fab fa-linkedin"></i> Profil LinkedIn</a></li>
-                    <li>GitHub: <a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                </ul>
-
-                <!-- Peta Lokasi (Leaflet) -->
-                <!-- <div id="map"></div> -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="p-strip--dark">
-        <div class="container">
-            <p>© 2023 Awan Berlian</p>
-        </div>
-    </footer>
-
-    <!-- Photoswipe Markup -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
+            <div class="profile-video">
+                <video src="https://files.catbox.moe/an0uz3.mp4" autoplay loop muted></video>
             </div>
         </div>
     </div>
+    <div class="card">
+        <h1 id="greeting"></h1>
+        <p>pengembang frontend dan backend yang bersemangat dari ... </p>
+    </div>
+    <section id="about-me" class="animate__animated animate__fadeIn">
+        <div class="card">
+            <h2>tentang saya</h2>
+            <p>saya adalah seorang pengembang yang menyukai tantangan dan terus belajar hal-hal baru. Saya memiliki
+                pengalaman
+                dalam pengembangan frontend dan backend, dan saya selalu berusaha untuk menciptakan solusi yang inovatif
+                dan efisien.</p>
+        </div>
+    </section>
+    <section id="projects" class="animate__animated animate__fadeInUp">
+        <div class="card">
+            <h2>Proyek</h2>
+            <div class="project-list">
+                <div class="project-item animate__animated animate__slideInLeft">
+                    <h3>Project 1</h3>
+                    <p>Deskripsi singkat tentang proyek 1. pembuatan malwer atau ransomware..</p>
+                    <a href="#" onclick="toggleImage('project1-image'); return false;">Lihat Detail</a>
+                    <img id="project1-image" class="project-image" src="https://files.catbox.moe/eisa5t.jpg"
+                        alt="Project 1 Image">
+                </div>
+                <div class="project-item animate__animated animate__slideInRight">
+                    <h3>Project 2</h3>
+                    <p>Deskripsi singkat tentang proyek 2. Fokus pada tantangan dan backend.</p>
+                    <a href="#" onclick="toggleImage('project2-image'); return false;">Lihat Detail</a>
+                    <img id="project2-image" class="project-image" src="https://files.catbox.moe/q8x1mr.jpg"
+                        alt="Project 2 Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="animate__animated animate__fadeInLeft">
+        <div class="card">
+            <h2>Pengalaman</h2>
+            <ul class="experience-list">
+                <li class="experience-item animate__animated animate__fadeIn">
+                    <h3>pengembang backend dan frontend</h3>
+                    <p></p>
+                    <p class="date">2025 - Sekarang</p>
+                    <p>Bertanggung jawab atas pengembangan dan pemeliharaan antarmuka pengguna.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="education" class="animate__animated animate__fadeInRight">
+        <div class="card">
+            <h2>PENDIDIKAN</h2>
+            <ul class="education-list">
+                <li class="education-item animate__animated animate__fadeIn">
+                    <h3>SEKOLH MENENGAN PERTAMA</h3>
+                    <p>TKJ/IT</p>
+                    <p class="date">2024 - 2025</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-    <!-- GSAP -->
+    <section id="contact" class="animate__animated animate__fadeInUp">
+        <div class="card">
+            <h2>Kontak</h2>
+            <div class="contact-info">
+                <p>Email: wanzofc@gmail.com</p>
+                <p>LinkedIn: <a href="#">linkedin.com/in/wanzofc</a></p>
+            </div>
+        </div>
+    </section>
+    <div class="card animate__animated animate__fadeIn">
+        <h2>🚀 Languages and Tools I Use</h2>
+        <div class="language-grid">
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                        alt="javascript" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                        alt="python" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go"
+                        width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c"
+                        width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                        alt="react" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg"
+                        alt="gulp" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                        alt="css3" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                        alt="html5" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                        alt="nodejs" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg"
+                        alt="nestjs" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                        alt="mongodb" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"><img
+                        src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="42"
+                        height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"><img
+                        src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="42"
+                        height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://cdn.worldvectorlogo.com/logos/django.svg"><img
+                        src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg"><img
+                        src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="42"
+                        height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"><img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                        alt="linux" width="42" height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"><img
+                        src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="42"
+                        height="42" /></a>
+            </div>
+            <div class="card animate__animated animate__zoomIn">
+                <a target="_blank" href="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"><img
+                        src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="42"
+                        height="42" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="card animate__animated animate__fadeInUp">
+        <h2>⚡️ Where to find me</h2>
+        <div class="social-badges">
+            <a target="_blank" href="https://www.instagram.com/wanz_brayy"><img
+                    src="https://img.shields.io/badge/instagram-logo?style=for-the-badge&logo=instagram&logoColor=white&color=%23F35369"
+                    alt="instagram" /></a>
+            <a target="_blank" href="https://codesandbox.com/u/wanzbrayy"><img
+                    src="https://img.shields.io/badge/codesandbox?style=for-the-badge&logo=codesandbox&logoColor=white&color=black"
+                    alt="codesandbox" /></a>
+            <a target="_blank" href="https://www.youtube.com/wanzofc"><img
+                    src="https://img.shields.io/badge/youtube-logo?style=for-the-badge&logo=youtube&logoColor=white&color=%23cc0000"
+                    alt="youtube" /></a>
+        </div>
+    </div>
+    <div class="card animate__animated animate__fadeIn">
+        <p><img align="center"
+                src="https://github-readme-stats.vercel.app/api?username=WANZOFC&show_icons=true&locale=en"
+                alt="GitHub Stats" /></p>
+        <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=WANZOFC"
+                alt="GitHub Streak" /></p>
+        <p><img
+                src="https://github-readme-stats.vercel.app/api/top-langs?username=WANZOFC&show_icons=true&locale=en&layout=compact"
+                alt="Top Languages" /></p>
+        <p><a href="https://github.com/ryo-ma/github-profile-trophy"><img
+                    src="https://github-profile-trophy.vercel.app/?username=WANZOFC" alt="GitHub Trophy" /></a></p>
+    </div>
+    <section id="youtube-video" class="animate__animated animate__fadeInUp">
+        <div class="card">
+            <h2>My Latest YouTube Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wanzofcjadikan" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- Lozad.js -->
-    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-
-    <!-- Isotope -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
-    <!-- Photoswipe -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/photoswipe-ui-default.min.js"></script>
-
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Leaflet JavaScript -->
-    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
-
-    <!-- validate.js (Validasi Form) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-
-    <!-- Cookie Consent JS -->
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-
-    <!-- Darkmode.js (Optional - jika menggunakan Dark Mode) -->
-    <!-- <script src="path/to/darkmode.js"></script> -->
-
-    <!-- Custom JavaScript -->
     <script>
-        // GSAP Animations
-        gsap.from("nav", { duration: 1, y: -50, opacity: 0 });
-        gsap.from("#about", { duration: 1, delay: 0.5, opacity: 0 });
-        gsap.from(".project-item", {
-            duration: 0.75, opacity: 0, y: 50, stagger: 0.2,
-            scrollTrigger: { trigger: "#projects", start: "top center" }
-        });
-
-        // Skill Card Animation (Show/Hide on Scroll)
-        const skillSection = document.querySelector("#skills");
-        const skillCards = document.querySelectorAll(".skill-card");
-
-        skillCards.forEach(card => {
-            gsap.set(card, { opacity: 0, y: 50 }); // Initially hide the cards
-
-            ScrollTrigger.create({
-                trigger: card,
-                start: "top 80%", // Adjust as needed
-                end: "bottom 20%",
-                markers: false, // For debugging
-                onEnter: () => {
-                    gsap.to(card, { opacity: 1, y: 0, duration: 0.75, ease: "power2.out" });
-                },
-                onLeaveBack: () => {
-                    gsap.to(card, { opacity: 0, y: 50, duration: 0.5, ease: "power1.in" });
-                },
-                once: false // Trigger every time it enters/leaves
-            });
-        });
-
-        gsap.from("#download-resume", {duration: 1, y: 50, opacity: 0, delay: 0.5})
-
-
-        // AOS Initialization
-        AOS.init();
-
-        // Typed.js Initialization
-        var typed = new Typed('#typed-text', {
-            strings: ['Web Developer', 'Cyber Security Enthusiast', 'Mahasiswa'],
-            typeSpeed: 50, backSpeed: 25, backDelay: 1500, loop: true
-        });
-
-        // Lozad.js Initialization
-        const observer = lozad();
-        observer.observe();
-
-        // Isotope Initialization
-        var iso = new Isotope('#project-gallery', { itemSelector: '.project-item', layoutMode: 'masonry' });
-        const filterButtons = document.querySelectorAll('.filter-button');
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const filterValue = this.getAttribute('data-filter');
-                iso.arrange({ filter: filterValue });
-            });
-        });
-
-        // Photoswipe Initialization
-        const openPhotoSwipe = (index) => {
-            const pswpElement = document.querySelectorAll('.pswp')[0];
-            const items = [
-                { src: 'placeholder-project1.jpg', w: 1600, h: 900, title: 'Project 1' },
-                { src: 'placeholder-project2.jpg', w: 1600, h: 900, title: 'Project 2' },
-                { src: 'https://files.catbox.moe/0l5hin.jpg', w: 1600, h: 900, title: 'Project 3' }
-            ];
-            const options = { index: index, history: false, focus: true, showAnimationDuration: 0, hideAnimationDuration: 0 };
-            const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-        const galleryElements = document.querySelectorAll('#project-gallery a');
-        galleryElements.forEach((element, index) => {
-            element.addEventListener('click', (event) => {
-                event.preventDefault();
-                openPhotoSwipe(index);
-            });
-        });
-
-        // Swiper Initialization
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1, spaceBetween: 30, loop: true,
-            pagination: { el: ".swiper-pagination", clickable: true, },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
-        });
-
-         // Form Validation (validate.js)
-        const form  = document.querySelector('#contactForm');
-        form.addEventListener('submit', function(event) {
-          event.preventDefault(); // stop form submission
-
-          const constraints = {
-            name: { presence: { allowEmpty: false } },
-            email: { presence: { allowEmpty: false }, email: true },
-            message: { presence: { allowEmpty: false } }
-          };
-
-          const validation = validate(form, constraints);
-
-          if (validation) {
-            console.log(validation);
-            alert("Terdapat error pada form. Periksa kembali input Anda.");
-          } else {
-            // Form is valid, you can submit it using AJAX or form.submit()
-            alert("Form berhasil dikirim!");
-            form.submit(); // Uncomment ini jika ingin menggunakan formspree
-          }
-        });
-
-        // Cookie Consent Initialization
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#ffff"
-            },
-            "button": {
-              "background": "#4CAF50"
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
             }
-          },
-          "content": {
-            "message": "Situs web ini menggunakan cookie untuk meningkatkan pengalaman pengguna.",
-            "dismiss": "Oke",
-            "link": "Pelajari lebih lanjut",
-            "href": "#" // Ganti dengan link ke kebijakan cookie Anda
-          }
         });
-
-        // Dark Mode Toggle (Optional)
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                // Simpan preferensi dark mode di localStorage (optional)
-                if (document.body.classList.contains('dark-mode')) {
-                    localStorage.setItem('darkMode', 'enabled');
-                } else {
-                    localStorage.setItem('darkMode', 'disabled');
-                }
-            });
-
-            // Periksa preferensi dark mode saat halaman dimuat (optional)
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                document.body.classList.add('dark-mode');
+        function toggleImage(imageId) {
+            var image = document.getElementById(imageId);
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
             }
-        }
+                    }
+        var typed = new Typed('#greeting', {
+            strings: ['Selamat datang di profile WANZOFC!', 'Welcome to WANZOFC profile!'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+        gsap.from(".card", { duration: 1, y: -50, opacity: 0, stagger: 0.2 });
+        gsap.from(".profile-container", { duration: 0.5, x: 50, opacity: 0 });
 
     </script>
 </body>
+
 </html>
